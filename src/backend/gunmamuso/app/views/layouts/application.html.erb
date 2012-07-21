@@ -2,12 +2,17 @@
 <html>
 <head>
   <title>Gunmamuso</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
-
+<% if current_user %>
+	<%= current_user.name %>さん |
+  <%= link_to "ログアウト", logout_path %>
+<% else %>
+  <%= link_to "facebookでlogin", "/auth/facebook" %>
+<% end %>
 <%= yield %>
 
 </body>
