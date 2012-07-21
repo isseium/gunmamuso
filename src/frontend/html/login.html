@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no">
+    <title>GUMMMA無双</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>
+<style type="text/css">  
+<!-- 
+    .center{
+        text-align: center
+    }
+    .gummaMapImage{
+        margin-bottom: 10px;
+    }
+-->  
+</style>  
+</head>
+<body>
+    <div data-role="page" id="maincontents">
+        <div data-role="header">
+            <h1>GUMMA無双</h1>
+        </div>
+        <div data-role="content">
+            <div class="center">
+                <img src="images/GummaMap.png" class="gummaMapImage" id="imageFile" height=250 width=250/>
+                <p>さあ、戦いはここから</p>
+                <form action="#" method="POST">
+                     <div id="fb-root"></div> 
+                     <script src="http://connect.facebook.net/en_US/all.js"></script> 
+                     <script> FB.init({ appId:'100659433405939', cookie:true, status:true, xfbml:true }); </script> 
+                     <fb:login-button>Login with Facebook</fb:login-button><br />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

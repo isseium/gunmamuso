@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1,user-scalable=no">
-    <title>jQueryの練習</title>
+    <title>GUMMMA無双</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.css" />
     <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>
     <script>
 	var old_y;
 	var y;
+    var NUM=0;
         $(function(){
             window.addEventListener("devicemotion",function(evt){
                 y = Math.round(evt.accelerationIncludingGravity.y); //縦方法の傾斜
-		if(y > 10){
+		if(y > 14 || y < -14){
 			gyro = 'true';
+            NUM++;
 		} else {
 			gyro = 'false';
 		}
-                $("#result").html("gyro:"+gyro);
+        $("#result").html(NUM);
             },false);
         });
     </script>
@@ -26,11 +28,13 @@
 <body>
     <div data-role="page" id="maincontents">
         <div data-role="header">
-            <h1>ジャイロセンサー</h1>
+            <h1>オラに力を分けてくれ</h1>
         </div>
         <div data-role="content">
-            <p>本体を傾けて下さい</p>
-            <output id="result">…</output>
+            <p>激しくふるんだ！
+                <output id="result">…</output>
+            </p>
+            <img src="images/genkidama01.jpg" id="imageFile" onclick="return ImageChange()" height=250 width=250/>
         </div>
     </div>
 </body>
