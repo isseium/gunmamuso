@@ -9,10 +9,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: gunmamuso_development
+  database: gunmamuso_dev
   pool: 5
-  username: root
-  password:
+  username: gunmamuso_dev
+  password: password
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -24,7 +24,7 @@ test:
   reconnect: false
   database: gunmamuso_test
   pool: 5
-  username: root
+  username: gunmamuso_dev
   password:
   host: localhost
 
@@ -34,6 +34,6 @@ production:
   reconnect: false
   database: gunmamuso_production
   pool: 5
-  username: root
-  password:
+  username: gunmamuso_dev
+  password: password
   host: localhost
