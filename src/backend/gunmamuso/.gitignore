@@ -16,3 +16,4 @@
 /tmp
 
 *.swp
+config/initializers/omniauth.rb
