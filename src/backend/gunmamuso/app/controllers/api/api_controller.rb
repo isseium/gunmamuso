@@ -34,7 +34,7 @@ class Api::ApiController < ApplicationController
 
     # 応援URL生成
     # TODO: あとで別だし
-    url = 'http://localhost:3000/genki/' + genkiball.id.to_s
+    url = 'http://' + request.host_with_port + '/genki/' + genkiball.id.to_s
 
     # 敵が現れたことをウォールに表示
     # TODO: 敵の種類を増やす
