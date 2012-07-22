@@ -5,8 +5,10 @@
     <meta name="viewport" content="initial-scale=1,user-scalable=no">
     <title>GUMMMA無双</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.css" />
+    <!--
     <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>
+        -->
 <style type="text/css">  
 <!-- 
     .center{
@@ -27,12 +29,7 @@
             <div class="center">
                 <img src="images/GummaMap.png" class="gummaMapImage" id="imageFile" height=250 width=250/>
                 <p>さあ、戦いはここから</p>
-                <form action="#" method="POST">
-                     <div id="fb-root"></div> 
-                     <script src="http://connect.facebook.net/en_US/all.js"></script> 
-                     <script> FB.init({ appId:'100659433405939', cookie:true, status:true, xfbml:true }); </script> 
-                     <fb:login-button>Login with Facebook</fb:login-button><br />
-                </form>
+                <a href="auth/facebook"><img src="images/facebook_login.png" /></a>
             </div>
         </div>
     </div>

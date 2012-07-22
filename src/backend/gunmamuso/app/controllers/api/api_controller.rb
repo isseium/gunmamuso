@@ -45,6 +45,28 @@ class Api::ApiController < ApplicationController
     end
   end
 
+  # 元気終了
+  def finishGenki
+    begin
+      genkiball = Genkiball.find_by_id params[:genki_id]
+    rescue => ex
+      raise_error 'DB Error'
+    end
+
+    # レスポンス生成
+    if genkiball
+      response = {'message' => true}
+      status = 200
+    else
+      response = {'message' => false}
+      status = 404
+    end
+
+    respond_to do |format|
+      format.json { render :json => create_json(response), :status => status }
+    end
+  end
+
   private
 
   #
