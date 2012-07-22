@@ -3,7 +3,8 @@ Gunmamuso::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#callback"
   match "/logout" => "sessions#destroy", :as => :logout
   namespace :api do
-    match 'test/:id', :to => "api#test", :defaults => { :format => 'json' }
+    match 'user/:id', :to => "api#user", :defaults => { :format => 'json' }
     match 'register/:id', :to => "api#registerUser", :defaults => { :format => 'json' }
+    match 'genki/generate/:fb_id', :to => "api#generateGenki", :defaults => { :format => 'json' }
   end 
 end
