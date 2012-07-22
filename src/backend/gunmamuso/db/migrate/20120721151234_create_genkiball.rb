@@ -1,4 +1,4 @@
-class TableGenkiball < ActiveRecord::Migration
+class CreateGenkiball < ActiveRecord::Migration
   def up
     create_table :genkiballs do |t|
       t.string  :fb_id
